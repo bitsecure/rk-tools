@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <errno.h>
 #include <string.h>
+#include <stdlib.h>
 #include <limits.h>
 #include <time.h>
 #include "rkrom_29xx.h"
@@ -206,7 +207,7 @@ int main(int argc, char **argv)
 			return 0;
 		}
 		// loader, majorver, minorver, subver, oldimage, newimage
-		pack_rom(argv[2], argv[3], argv[4], argv[5], argv[6], argv[7]);
+		pack_rom(argv[2], atoi(argv[3]), atoi(argv[4]), atoi(argv[5]), argv[6], argv[7]);
 	}
 	else
 	{
